@@ -1,0 +1,23 @@
+<div class="petition-list-container">
+  <div class="petition-list-header">
+    <div class="petition-list-header-title">gVote</div>
+    <div class="petition-list-header-actions">
+      <select name="petition-sort" id="petition-sort">
+        <option label="By Date"></option>
+        <option label="By Votes"></option>
+      </select>
+      <button id="petition-create">Create</button>
+    </div>
+  </div>
+  <div class="petition-list-table">
+    <div *ngFor="let petition of petitions" class="petition" (click)="openPetition.emit(petition)">
+      <div class="petition-name">
+        {{ petition.name }}
+      </div>
+      <div class="petition-vote-count">{{ petition.voteCount }} votes</div>
+    </div>
+    <div *ngIf="!petitions?.length" class="empty-table">
+      No Petitions Added Yet...
+    </div>
+  </div>
+</div>

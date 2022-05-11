@@ -1,0 +1,9 @@
+<ng-container *ngIf="isLoading"> Loading... </ng-container>
+<ng-container *ngIf="!isLoading">
+  <div class="app-container">
+    <app-petition-list
+      [petitions]="petitions"
+      (openPetition)="openViewPetitionPopup($event)"
+    ></app-petition-list>
+  </div>
+</ng-container>

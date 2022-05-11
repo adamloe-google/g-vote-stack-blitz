@@ -1,0 +1,31 @@
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="!isLoading" class="petition-view-popup">
+  <button class="popup-close-button" (click)="dialogRef.close()">X</button>
+
+  <div class="petition-info">
+    <div class="petition-top">
+      <div class="petition-name">
+        {{ petition.name }}
+      </div>
+      <div class="petition-vote-count">{{ petition.voteCount }} votes</div>
+    </div>
+    <div class="petition-date">
+      {{ date }}
+    </div>
+    <div class="petition-description">
+      {{ petition.description }}
+    </div>
+  </div>
+
+  <button
+    *ngIf="!hasVotedForPetitionAlready"
+    class="sign-petition-button"
+    (click)="signPetition()"
+  >
+    Sign Petition
+  </button>
+
+  <button *ngIf="hasVotedForPetitionAlready" class="sign-petition-button">
+    Thanks for signing our petition!
+  </button>
+</div>

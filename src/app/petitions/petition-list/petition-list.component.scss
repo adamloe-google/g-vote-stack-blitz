@@ -1,0 +1,58 @@
+$border: 1px solid #555555;
+
+.petition-list-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  border: $border;
+  border-radius: 10px;
+
+  .petition-list-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: $border;
+    padding: 15px;
+
+    .petition-list-header-title {
+      color: #040404;
+      font-weight: 600;
+      font-size: 1.25em;
+    }
+
+    .petition-list-header-actions {
+      display: flex;
+      align-items: stretch;
+
+      select#petition-sort {
+        margin: 5px;
+      }
+
+      button#petition-create {
+        margin: 5px;
+      }
+    }
+  }
+
+  .petition-list-table {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 7.5px;
+
+    .petition {
+      margin: 7.5px;
+      padding: 10px;
+      border: $border;
+      border-radius: 5px;
+
+      .petition-name {
+      }
+
+      .petition-vote-count {
+      }
+    }
+
+    .empty-table {
+    }
+  }
+}

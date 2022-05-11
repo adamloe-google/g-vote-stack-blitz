@@ -1,0 +1,50 @@
+.petition-view-popup {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+
+  .popup-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .petition-info {
+    .petition-top {
+
+      .petition-name {
+        font-size: 24px;
+      }
+
+      .petition-vote-count {
+        font-size: 18px;
+      }
+    }
+
+    .petition-date {
+      font-size: 18px;
+    }
+
+    .petition-description {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  }
+
+  .sign-petition-button {
+    margin-top: 20px;
+    border: 1px solid #555555;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .already-signed-button {
+    margin-top: 20px;
+    border: 1px solid #555555;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
